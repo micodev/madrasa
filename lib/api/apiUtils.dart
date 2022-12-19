@@ -3,7 +3,7 @@ import 'package:get_storage/get_storage.dart';
 import '../model/errorModel.dart';
 import '../model/responseModel.dart';
 
-String url = "http://138.68.113.224:8009"; //TODO:: add api url
+String url = "http://3.74.16.10:8000"; //TODO:: add api url
 final apiUrl = "$url/api";
 Dio get dio {
   var headers = {

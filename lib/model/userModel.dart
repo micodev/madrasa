@@ -1,6 +1,7 @@
 import 'package:flight_booking_sys/model/schoolModel.dart';
 import 'package:flight_booking_sys/model/stageMaterialModel.dart';
 import 'package:flight_booking_sys/model/stageModel.dart';
+import 'package:supercharged/supercharged.dart';
 
 class UserModel {
   String? id;
@@ -15,7 +16,7 @@ class UserModel {
   String? classId;
   String? parentJob;
   int? userType;
-  int? paid;
+  bool? paid;
   int? salary;
   String? createdAt;
   String? updatedAt;
@@ -53,14 +54,14 @@ class UserModel {
     userName = json['user_name']?.toString();
     address = json['address']?.toString();
     phoneNumber = json['phone_number']?.toString();
-    gender = json['gender']?.toInt();
+    // gender = json['gender']?.toInt();
     birthDay = json['birth_day']?.toString();
     discountValue = json['discount_value']?.toString();
     classId = json['class_id']?.toString();
     parentJob = json['parent_job']?.toString();
     userType = json['user_type']?.toInt();
-    paid = json['paid']?.toInt();
-    salary = json['salary']?.toInt();
+    paid = json['paid'];
+    salary = (json['salary'] as String?)?.toInt();
     createdAt = json['created_at']?.toString();
     updatedAt = json['updated_at']?.toString();
     school =
