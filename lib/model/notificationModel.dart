@@ -9,7 +9,7 @@ class NotificationModel {
   int? type;
   String? targetId;
   String? schoolId;
-  int? seen;
+  bool? seen;
   String? createdAt;
   String? updatedAt;
   UserModel? issuer;
@@ -39,7 +39,7 @@ class NotificationModel {
     type = json['type']?.toInt();
     targetId = json['target_id']?.toString();
     schoolId = json['school_id']?.toString();
-    seen = json['seen']?.toInt();
+    seen = (json['seen'] as bool?);
     createdAt = json['created_at']?.toString();
     updatedAt = json['updated_at']?.toString();
     issuer =

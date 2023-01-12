@@ -1,4 +1,5 @@
 import 'package:flight_booking_sys/model/degreeModel.dart';
+import 'package:supercharged/supercharged.dart';
 
 class SemesterModel {
   String? id;
@@ -25,7 +26,7 @@ class SemesterModel {
   SemesterModel.fromJson(Map<String, dynamic> json) {
     id = json['id']?.toString();
     name = json['name']?.toString();
-    maxDegree = json['max_degree']?.toInt();
+    maxDegree = (json['max_degree'] as String?)?.toInt();
     classId = json['class_id']?.toString();
     schoolId = json['school_id']?.toString();
     deletedAt = json['deleted_at']?.toString();

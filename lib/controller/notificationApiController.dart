@@ -183,7 +183,7 @@ class NotificationApiController extends GetxController {
       logger.e(l!.errors);
     }, (r) {
       final index = notifications.indexWhere((p0) => p0!.id == notification.id);
-      notifications[index]!.seen = 1;
+      notifications[index]!.seen = true;
       notifications.refresh();
       // notifications.clear();
       // notifications.addAll(r!.notifications!);

@@ -26,7 +26,8 @@ dependencies:
   # pusher_client:
   image_gallery_saver:
   flutter_pusher_client:
-    path: "../flutter_pusher_client"
+    git:
+      url: https://github.com/mannysoft/flutter-pusher-client.git
   google_api_availability:
   image_compression: ^1.0.3
   badges: ^2.0.2
