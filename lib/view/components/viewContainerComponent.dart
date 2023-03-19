@@ -57,7 +57,7 @@ class ViewContainerComponent extends StatelessWidget {
       String title = "";
       switch (sc.currentRoute.value) {
         case MainRoute:
-          title = "الصفحة الرئيسية";
+          title = "المرحلهحة الرئيسية";
           break;
         case CommentRoute:
           title = "تعليقات التبليغ";

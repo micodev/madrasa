@@ -179,11 +179,11 @@ class ExamTableView extends StatelessWidget {
                   },
                   dropdownSearchDecoration: InputDecoration(
                     border: InputBorder.none,
-                    labelText: "الصف",
+                    labelText: "المرحله",
                   ),
                   searchFieldProps: TextFieldProps(
                       decoration: InputDecoration(border: InputBorder.none)),
-                  mode: Mode.MENU,
+                  // mode: Mode.MENU,
                   showSelectedItems: false,
                   // popupItemDisabled: (item) => item
                   //     .startsWith(dailyMaterialController.selectedDay.value),

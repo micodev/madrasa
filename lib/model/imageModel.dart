@@ -16,7 +16,7 @@ class ImageModel {
   });
   ImageModel.fromJson(Map<String, dynamic> json) {
     id = json['id']?.toString();
-    image = "http://138.68.113.224:8009" + "${json['image']?.toString()}";
+    image = "http://157.230.120.187:8000" + "${json['image']?.toString()}";
     reportId = json['report_id']?.toString();
     schoolId = json['school_id']?.toString();
     createdAt = json['created_at']?.toString();

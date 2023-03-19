@@ -28,7 +28,7 @@ class MainView extends StatelessWidget {
   final auth = AuthController.controller;
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       ScaffoldController.controller.showAppbar.value = true;
     });
     return LayoutBuilder(builder: (context, constraints) {
@@ -208,7 +208,7 @@ class MainView extends StatelessWidget {
                           },
                           dropdownSearchDecoration: InputDecoration(
                               border: InputBorder.none,
-                              labelText: "الصف",
+                              labelText: "المرحله",
                               labelStyle: TextStyle(
                                   color: Theme.of(context)
                                       .appBarTheme

@@ -64,15 +64,17 @@ class ReportFormView extends StatelessWidget {
                         buildBeautifulTextField(context, "محتوى التبليغ",
                             controller: reportController.body,
                             maxLines: 5,
-                            maxLength: 300,
-                            validator: (val) {}),
+                            maxLength: 300, validator: (val) {
+                          return null;
+                        }),
                         SizedBox(
                           height: 10,
                         ),
                         buildBeautifulTextField(context, "رابط يوتيوب",
                             controller: reportController.url,
-                            maxLines: 1,
-                            validator: (val) {}),
+                            maxLines: 1, validator: (val) {
+                          return null;
+                        }),
                         SizedBox(
                           height: 10,
                         ),
@@ -257,7 +259,8 @@ class ReportFormView extends StatelessWidget {
 
   Widget classBuilder(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Theme.of(context).backgroundColor),
+      decoration:
+          BoxDecoration(color: Theme.of(context).colorScheme.background),
       child: Column(
         children: [
           Row(children: [
@@ -271,7 +274,7 @@ class ReportFormView extends StatelessWidget {
                         BoxDecoration(borderRadius: BorderRadius.circular(10)),
                     child: Text(
                       selectedItem!,
-                      style: Theme.of(context).textTheme.subtitle2!,
+                      style: Theme.of(context).textTheme.titleSmall!,
                     ),
                   );
                 },
@@ -285,7 +288,7 @@ class ReportFormView extends StatelessWidget {
                 },
                 dropdownSearchDecoration: InputDecoration(
                   border: InputBorder.none,
-                  labelText: "الصف",
+                  labelText: "المرحله",
                 ),
                 searchFieldProps: TextFieldProps(
                     decoration: InputDecoration(border: InputBorder.none)),

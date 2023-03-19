@@ -260,7 +260,7 @@ class DailyTableView extends StatelessWidget {
                   },
                   dropdownSearchDecoration: InputDecoration(
                     border: InputBorder.none,
-                    labelText: "الصف",
+                    labelText: "المرحله",
                   ),
                   searchFieldProps: TextFieldProps(
                       decoration: InputDecoration(border: InputBorder.none)),

@@ -331,7 +331,7 @@ class _ComplexDrawerState extends State<ComplexDrawer> {
   @override
   void initState() {
     super.initState();
-    cdms.add(CDM(Icons.home, "الصفحة الرئيسية", [], tap: () async {
+    cdms.add(CDM(Icons.home, "المرحلهحة الرئيسية", [], tap: () async {
       Get.back();
       if (!(Get.currentRoute == MainRoute)) {
         await Get.offAllNamed(MainRoute);

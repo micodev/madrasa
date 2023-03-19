@@ -7,7 +7,6 @@ import 'package:dio/dio.dart';
 import 'package:flight_booking_sys/api/apiEndpoints.dart';
 import 'package:flight_booking_sys/model/commentModel.dart';
 import 'package:flight_booking_sys/model/errorModel.dart';
-import 'package:flight_booking_sys/model/imageModel.dart';
 import 'package:flight_booking_sys/model/responseModel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pusher_client/flutter_pusher.dart';
@@ -77,7 +76,7 @@ class CommentController extends GetxController {
         comments.insert(0, comment);
       });
       if (!isReplyPressed)
-        WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+        WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
           scrollController.scrollToIndex(comments.length - 1,
               preferPosition: AutoScrollPosition.end);
         });
@@ -183,7 +182,7 @@ class CommentController extends GetxController {
     }
 
     if (scrollIndex == -1) return; //todo: not found
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       scrollController.scrollToIndex(scrollIndex,
           preferPosition: AutoScrollPosition.end);
       indexAnimation.value = scrollIndex;
@@ -214,7 +213,7 @@ class CommentController extends GetxController {
       r!.comments!.forEach((comment) {
         comments.add(comment);
       });
-      WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+      WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
         scrollController.scrollToIndex(comments.length - 1,
             preferPosition: AutoScrollPosition.end);
       });

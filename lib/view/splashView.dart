@@ -14,7 +14,7 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ScaffoldController.controller.showAppbar.value = false;
-    WidgetsBinding.instance!.addPostFrameCallback((_) => getReady());
+    WidgetsBinding.instance.addPostFrameCallback((_) => getReady());
     return Scaffold(
       body: Center(
           child: Container(

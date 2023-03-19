@@ -1,4 +1,4 @@
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badge;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flight_booking_sys/constants/constantsVariables.dart';
 import 'package:flight_booking_sys/constants/full_screen_image.dart';
@@ -90,7 +90,7 @@ class CommentView extends StatelessWidget {
                                 color: isScrolled
                                     ? Theme.of(context)
                                         .colorScheme
-                                        .secondaryVariant
+                                        .secondaryContainer
                                     : isSender
                                         ? Theme.of(context).dividerColor
                                         : Theme.of(context)
@@ -170,7 +170,8 @@ class CommentView extends StatelessWidget {
                                                 padding: EdgeInsets.all(5),
                                                 decoration: BoxDecoration(
                                                     color: Theme.of(context)
-                                                        .errorColor,
+                                                        .colorScheme
+                                                        .error,
                                                     shape: BoxShape.circle),
                                                 child: Icon(
                                                   Icons.close,
@@ -293,7 +294,8 @@ class CommentView extends StatelessWidget {
                                                                           .circle,
                                                                       color: Theme.of(
                                                                               context)
-                                                                          .backgroundColor,
+                                                                          .colorScheme
+                                                                          .background,
                                                                     ),
                                                                     child: Icon(
                                                                         Icons
@@ -317,7 +319,8 @@ class CommentView extends StatelessWidget {
                                                                         shape: BoxShape
                                                                             .circle,
                                                                         color: Theme.of(context)
-                                                                            .backgroundColor),
+                                                                            .colorScheme
+                                                                            .background),
                                                                     child: Icon(
                                                                         Icons
                                                                             .download),
@@ -446,7 +449,8 @@ class CommentView extends StatelessWidget {
                                               padding: EdgeInsets.all(5),
                                               decoration: BoxDecoration(
                                                   color: Theme.of(context)
-                                                      .errorColor,
+                                                      .colorScheme
+                                                      .error,
                                                   shape: BoxShape.circle),
                                               child: Icon(
                                                 Icons.close,
@@ -519,8 +523,8 @@ class CommentView extends StatelessWidget {
                             onPressed: () {
                               commentController.addImage();
                             },
-                            icon: Badge(
-                              badgeColor: Theme.of(context).primaryColor,
+                            icon: badge.Badge(
+                              // badgeColor: Theme.of(context).primaryColor,
                               child: Icon(Icons.image),
                               badgeContent: Text(
                                 "${commentController.images.length}",
@@ -553,14 +557,15 @@ class CommentView extends StatelessWidget {
                           Text(
                             "يرجى الإنتظار",
                             style: TextStyle(
-                                color: Theme.of(context).backgroundColor),
+                                color:
+                                    Theme.of(context).colorScheme.background),
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: LoadingBouncingLine.circle(
                               size: 20,
                               backgroundColor:
-                                  Theme.of(context).backgroundColor,
+                                  Theme.of(context).colorScheme.background,
                             ),
                           )
                         ],

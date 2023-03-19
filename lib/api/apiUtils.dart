@@ -3,7 +3,7 @@ import 'package:get_storage/get_storage.dart';
 import '../model/errorModel.dart';
 import '../model/responseModel.dart';
 
-String url = "http://138.68.113.224:8009"; //TODO:: add api url
+String url = "http://157.230.120.187:8000"; //TODO:: add api url
 final apiUrl = "$url/api";
 Dio get dio {
   var headers = {
@@ -13,9 +13,9 @@ Dio get dio {
   if (storage.hasData("token"))
     headers["authorization"] = "Bearer ${storage.read("token")}";
   final baseOptions = BaseOptions(
-      sendTimeout: 10000,
+      sendTimeout: Duration(seconds: 10),
       receiveDataWhenStatusError: true,
-      receiveTimeout: 10000,
+      receiveTimeout: Duration(seconds: 10),
       followRedirects: false,
       validateStatus: (status) {
         return status! < 600;

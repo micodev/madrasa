@@ -13,7 +13,7 @@ class StageMaterialModel {
   "updated_at": null,
   "stage": {
     "id": "66bc4e9f-4f23-474b-89de-adcd04a2e661",
-    "name": "الصف الخامس",
+    "name": "المرحله الخامس",
     "fee": 1500000,
     "school_id": "11330ebb-0dfd-4df3-8a3e-7dc3cc9ed34f",
     "created_at": "2021-11-07T15:33:56.000000Z",

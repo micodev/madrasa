@@ -2,7 +2,6 @@ import 'package:clippy_flutter/diagonal.dart';
 import 'package:flight_booking_sys/controller/scaffoldController.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:loading_animations/loading_animations.dart';
 import '../../constants/constantsVariables.dart';
@@ -16,7 +15,7 @@ class RegisterationView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bootstrapGridParameters(gutterSize: 0);
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       ScaffoldController.controller.showAppbar.value = false;
     });
     return registerationFormBuilder(context);
